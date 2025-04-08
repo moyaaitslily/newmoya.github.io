@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lili Land</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script src="p5.min (1).js"></script>
+  <link rel="icon" href="bear-icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+</head>
+
+<header class="site-title">
+    <h1>Lili Land</h1>
+</header>
+<body>
+  
+  <audio id="bg-music" loop>
+    <source src="Ditto.mp3" type="audio/mpeg">
+  </audio>  
+  
+  <main class="grid-gallery">
+    <div class="image-card">
+        <a href="assignments.html">
+          <img src="https://i.pinimg.com/736x/e7/49/6b/e7496b453434582b9471549e0dae446b.jpg" alt="Assignments">
+          <div class="label">Assignments</div>
+        </a>
+      </div>
+
+    <div class="image-card">
+        <a href="lab.html">
+            <img src="https://i.pinimg.com/736x/ce/88/a4/ce88a4316d0db2be2bdd431727eb3c0c.jpg" alt="Labs">
+            <div class="label">Labs</div>
+          </a>
+    </div>
+   
+    <div class="image-card">
+      <a href="https://youtu.be/wQlbeHWJFWg" target="_blank">
+        <img src="https://i.pinimg.com/736x/31/0e/98/310e98a48d6495431f4e917389cd9d26.jpg" alt="Relax Video" />
+        <div class="label">Relax</div>
+      </a>
+    </div>    
+    
+  </main>
+
+  <section id="sketch-container">
+  </section>
+
+  <script src="sketch.js"></script>
+  <script>
+    function playMusicOnce() {
+      const audio = document.getElementById("bg-music");
+      audio.play().catch(err => {
+        console.log("Autoplay blocked:", err);
+      });
+      document.removeEventListener("click", playMusicOnce); // only once
+    }
+  
+    document.addEventListener("click", playMusicOnce);
+  </script>
+</body>
+</html>
