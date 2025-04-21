@@ -7,16 +7,24 @@
 </head>
 <body>
   <h1>💸 Restaurants Sorted by Price</h1>
-  <div id="restaurant-list" class="grid"></div>
+  <div id="restaurant-list"></div>
   <a href="index.html" class="btn">← Back to Home</a>
-  <div class="quote" id="quote-box"></div>
+
+  <!-- Load scripts after HTML content -->
   <script src="data.js"></script>
   <script src="sketch.js"></script>
   <script>
     window.onload = () => {
-      sortByPrice();
-      displayQuote();
+      sortByPrice(); // ✅ works now!
     };
   </script>
+  <script src="data.js"></script>
+  <script src="sketch.js"></script>
+  <script>
+    window.onload = () => {
+      sortByPrice(); // Automatically sort and show on page load
+    };
+  </script>
+  
 </body>
 </html>

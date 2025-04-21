@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bon Gung Sushi Cafe Menu</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .menu-thumbnail {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 16px;
+      margin-top: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-thumbnail:hover {
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>📋 Bon Gung Sushi Cafe</h1>
+
+    <img
+      id="menuImage"
+      src="https://lh3.googleusercontent.com/gps-cs-s/AB5caB-SfpqYy_kJpiRAoKaUXtz1SE1o02eKc0kgDmpZIfO6i2H6saPCZPZLz_DtgUipjM4GLy0LwxKfeamad0amwfSM0pzs_oyKJcysis1h94uFLHpnyEIsq6pWydvLM6sVKTfjGfqVtg=s680-w680-h510"
+      alt="Bon Gung Sushi Cafe Menu Page"
+      class="menu-thumbnail"
+      onclick="toggleMenuImage()"
+    />
+
+    <p style="margin-top: 10px; font-size: 0.9em; color: #5a5a5a;">Click the image to see the next menu 📄</p>
+
+    <a href="list.html" class="btn" style="margin-top: 30px;">← Back to All Restaurants</a>
+  </div>
+
+  <script>
+    const images = [
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-SfpqYy_kJpiRAoKaUXtz1SE1o02eKc0kgDmpZIfO6i2H6saPCZPZLz_DtgUipjM4GLy0LwxKfeamad0amwfSM0pzs_oyKJcysis1h94uFLHpnyEIsq6pWydvLM6sVKTfjGfqVtg=s680-w680-h510",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-Sxu3iEIiajpXMt7d91NmfiL-SkXRzhSxA0nwPUtPY0KkUPbHREnQ1vjDnbSCwiFhzrbUUTr4d5NfFDXYcSIz0GNTf0-P7DKK9FkNpWppU7uFMsMdZm-WiV-LbUc0s54_MKvTh8A=s680-w680-h510",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB-hbxkhShXKPFnUWOVzaGjbljIM3OIMQNLYmy41xenraFkPo1yYSmBC9An6PNOMMUHiCnx3zOXf3aqe5PI9cqmHfAXtWQLZizuX3ziVAMa1w8y3GjsswDCroiOjSPgdMWSXRJEe=s680-w680-h510"
+    ];
+
+    let currentIndex = 0;
+
+    function toggleMenuImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      document.getElementById("menuImage").src = images[currentIndex];
+    }
+  </script>
+</body>
+</html>

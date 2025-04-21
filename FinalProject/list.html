@@ -6,22 +6,26 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🍱 OCADU Eats Explorer</h1>
+  <h1>OCADU Eats Explorer</h1>
   <p class="subtitle">Tap into tasty tiles. Your lunch awaits!</p>
+
   <div class="nav-bar">
     <a href="random.html" class="btn">🎲 Random</a>
     <a href="sorted.html" class="btn">💰 Sort by Price</a>
     <a href="index.html" class="btn">🏠 Home</a>
   </div>
+
   <div id="restaurant-grid" class="grid"></div>
-  <div class="quote" id="quote-box"></div>
+
+  <!-- Scripts should be at the bottom for best loading -->
   <script src="data.js"></script>
   <script src="sketch.js"></script>
   <script>
     window.onload = () => {
-      displayRestaurants();
-      displayQuote();
+      displayRestaurants(); // Ensure this function exists in sketch.js
     };
   </script>
 </body>
 </html>
+
+

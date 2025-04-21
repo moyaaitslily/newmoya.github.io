@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tasty Chinese Food Menu</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .menu-thumbnail {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 16px;
+      margin-top: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-thumbnail:hover {
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>📋 Tasty Chinese Food Menu</h1>
+
+    <img
+      id="menuImage"
+      src="https://menu.restaurantguru.com/m2/menu-Tasty-Chinese-Food-Restaurant-6m0.jpg"
+      alt="Tasty Chinese Menu Page"
+      class="menu-thumbnail"
+      onclick="toggleMenuImage()"
+    />
+
+    <p style="margin-top: 10px; font-size: 0.9em; color: #5a5a5a;">Click the image to see the next menu 📄</p>
+
+    <a href="list.html" class="btn" style="margin-top: 30px;">← Back to All Restaurants</a>
+  </div>
+
+  <script>
+    const images = [
+      "https://menu.restaurantguru.com/m2/menu-Tasty-Chinese-Food-Restaurant-6m0.jpg",
+      "https://lh3.googleusercontent.com/geougc-cs/AIHozJKyaMIUjt-OPPmbokVNRLsR0KPpp5WEJxTnHUQJnyZTFTDsA7XNSba99L5QRlS4o5pu9RN2nfwBC-k7oe8zrvI6iZ5-A-BvaieFhGV5o7ogrskN271MZ-rb38UGIvQ6FLaivuSI=s1926-w1926-h1826",
+      "https://lh3.googleusercontent.com/gps-cs-s/AB5caB8ojEL57mtaL87xfB9IsNdlwL4CY8vkfjF7fa6_4d21xXhiTmyhcO74nbWu-q7uJ6bsJ8vtNV00RJbDNHFWVpx8-p5U6YpO-0npczAqqEZ0oQ_-L-rB6FPgN9eorUp26m7lr7xe=s680-w680-h510"
+    ];
+
+    let currentIndex = 0;
+
+    function toggleMenuImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      document.getElementById("menuImage").src = images[currentIndex];
+    }
+  </script>
+</body>
+</html>
+
