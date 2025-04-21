@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Lunch Pick</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🍜 Your Random Pick!</h1>
+  <div id="restaurant-list" class="grid"></div>
+  <a href="index.html" class="btn">← Back to Home</a>
+  <div class="quote" id="quote-box"></div>
+  <script src="data.js"></script>
+  <script src="sketch.js"></script>
+  <script>
+    window.onload = () => {
+      showRandomRestaurant();
+      displayQuote();
+    };
+  </script>
+</body>
+</html>
